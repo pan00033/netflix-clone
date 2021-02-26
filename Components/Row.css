@@ -1,0 +1,4 @@
+.row__posters {
+  width: 100%; /* Only fills 100% of the screen */
+  object-fit: contain; /* This will always keep the image looks nice */
+}
