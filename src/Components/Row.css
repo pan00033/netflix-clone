@@ -3,8 +3,24 @@
   object-fit: contain; /* This will always keep the image looking nice */
   width: 100%; /*Only fills 100% of the screen*/
   max-height: 100px;
+  margin-right: 10px; /* making posters not sticking to each other*/
+  transition: transform 450ms; /*Whenever the image changes size it will take around 0.5 seconds*/
+  padding: 20px; /* add padding so it doesn't crop when it grows during hover mode */
+}
+
+/* adding hover effect */
+.row__poster:hover {
+  transform: scale(
+    1.08
+  ); /* hover size will grow to be 1.08 * original poster size */
 }
 
 .row__posters {
   display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll; /*adding scroll bar for horizontal axis*/
+}
+
+.row__posters::-webkit-scrollbar {
+  display: none;
 }
