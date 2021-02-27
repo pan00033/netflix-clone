@@ -1,4 +1,10 @@
-.row__posters {
-  width: 100%; /* Only fills 100% of the screen */
+.row__poster {
+  /* This is for each single poster not the entire row */
   object-fit: contain; /* This will always keep the image looking nice */
+  width: 100%; /*Only fills 100% of the screen*/
+  max-height: 100px;
+}
+
+.row__posters {
+  display: flex;
 }

@@ -30,7 +30,11 @@ function Row({ title, fetchUrl }) {
         {/* go through every movie in the array, then make the image and return the image */}
         {movies.map((movie) => {
           return (
-            <img src={`${base_url}${movie.poster_path}`} alt={movie.name} />
+            <img
+              className="row__poster"
+              src={`${base_url}${movie.poster_path}`}
+              alt={movie.name}
+            />
           );
         })}
       </div>
