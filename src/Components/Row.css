@@ -24,3 +24,15 @@
 .row__posters::-webkit-scrollbar {
   display: none;
 }
+
+.row__posterLarge {
+  max-height: 250px;
+}
+
+.row__posterLarge:hover {
+  transform: scale(1.09);
+}
+
+.row {
+  margin-left: 20px;
+}
