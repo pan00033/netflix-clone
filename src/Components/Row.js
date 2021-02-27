@@ -19,8 +19,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
   //outside useEffect method block and basically useEffect depends on fetchUrl and will update
   //every time fetchUrl changes.
 
-  console.table(movies);
-
   return (
     <div className="row">
       <h2>{title}</h2>
@@ -32,12 +30,10 @@ function Row({ title, fetchUrl, isLargeRow }) {
           return (
             <img
               key={movie.id} /* each poster is associated with an id*/
-              className={`row__poster ${
-                isLargeRow && "row__posterLarge"
-              }`} /* if it is the large row then add another classname*/
-              src={`${base_url}${
-                isLargeRow ? movie.poster_path : movie.backdrop_path
-              }`}
+              className={`row__poster ${isLargeRow && "row__posterLarge"
+                }`} /* if it is the large row then add another classname*/
+              src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path
+                }`}
               alt={movie.name}
             />
           );
