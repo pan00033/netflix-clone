@@ -1,3 +1,7 @@
+# Netflix Clone
+
+Utilized the React library, importing and exporting components, props, TMDB(The Movie Database) API and more to achieve a fully functioning Netflix clone.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
