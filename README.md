@@ -1,6 +1,19 @@
 # Netflix Clone
 
-Utilized the React library, importing and exporting components, props, TMDB(The Movie Database) API and more to achieve a fully functioning Netflix clone.
+Utilized the React library, importing and exporting components, props, TMDB(The Movie Database) API, Ajax and more to achieve a fully functioning Netflix clone.
+
+# Tech Stack
+
+* React
+* JSX
+* Axios
+* HTML&CSS
+* TMDB API
+* Ajax
+
+# Demo Link
+
+This web app is deployed using Firebase at https://netflix-clone-94179.web.app/
 
 # Getting Started with Create React App
 
