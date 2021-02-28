@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "../axios"; //rename it to be axios(it was called instance)
 import "./Row.css";
 import Youtube from "react-youtube";
-import movieTrailer from 'movie-trailer';
+// import movieTrailer from 'movie-trailer';
 
 
 const base_url = "https://image.tmdb.org/t/p/original/";
