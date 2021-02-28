@@ -4,6 +4,7 @@ import "./Row.css";
 import Youtube from "react-youtube";
 import movieTrailer from 'movie-trailer';
 
+
 const base_url = "https://image.tmdb.org/t/p/original/";
 
 function Row({ title, fetchUrl, isLargeRow }) {
@@ -19,15 +20,25 @@ function Row({ title, fetchUrl, isLargeRow }) {
     }
   };
 
-  const handleClick = movie => {
-    // if there is already a trailerUrl assigned to that movie, we clean it.
+  // const handleClick = movie => {
+  //   // if there is already a trailerUrl assigned to that movie, we clean it.
+  //   if (trailerUrl) {
+  //     setTrailerUrl("");
+  //   } else {
+  //     movieTrailer(movie?.name || "").then(url => {
+  //       const urlParams = new URLSearchParams(new URL(url).search);
+  //       setTrailerUrl(urlParams.get('v'));
+  //     }).catch(error => console.log(error));
+  //   }
+  // };
+  const handleClick = async (movie) => {
     if (trailerUrl) {
       setTrailerUrl("");
     } else {
-      movieTrailer(movie?.name || "").then(url => {
-        const urlParams = new URLSearchParams(new URL(url).search);
-        setTrailerUrl(urlParams.get('v'));
-      }).catch(error => console.log(error));
+      let trailerurl = await axios.get(
+        `/movie/${movie.id}/videos?api_key=6a3fc27acf764ac5b2b317704f12a157`
+      );
+      setTrailerUrl(trailerurl.data.results[0]?.key);
     }
   };
 
